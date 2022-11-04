@@ -41,8 +41,14 @@ header{
 Logo og burger */
 #logo > img{
     width:100%;
+    transition: 5s;
+    animation-name: ting, ting2;
+    animation-duration: 3s;
 }
 
+#logo > img:hover{
+    transform: rotate(360deg);
+}
 #navMobile > a > img{
     width:100%; 
 }
