@@ -3,22 +3,22 @@
     padding: 0px;
     box-sizing: border-box;
 }
-main{ 
-    background-image:url("images/20210612-landskamp-arrangement-ceres-park-0035.jpeg");
-    background-size:cover;
-    height:500px;
- }
 .minitop{
     background-image:url("images/20210612-landskamp-arrangement-ceres-park-0035.jpeg");
     background-size:cover;
     height:650px;
     margin-bottom: 50px;
+
 }
+
+
 .Miniheader, .container1, .container2{
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
 }
+
+
 /* HEADER: */
 h1, p, footer{
     margin: 15px;
@@ -46,13 +46,8 @@ Logo og burger */
 #navMobile > a > img{
     width:100%; 
 }
-.miniheader{
-    margin: -10px;
-    margin-top: 100vh;
-    padding-left: 27px;
-    padding-right: 27px;
+
     
-}
 hr {
     padding: 0;
     
@@ -67,9 +62,27 @@ section > div{
     width: 30%;
     height: 385px;
     margin: 5px;
-
+    
     background-color: cadetblue;
     border-radius: 15px;
+    animation-name: ting, ting2;
+    animation-duration: 3s;
+}
+
+section div:hover,.container1 > div:first-child:hover, .container2 > div:nth-child(2):hover{
+    background-color: green;
+    transition: 1s;
+    transition-timing-function: ease;
+    transform: rotate(720deg)
+}
+@keyframes ting{
+    from{opacity: 0;;}
+    to{opacity: 1;}
+}
+
+@keyframes ting2{
+    from {width: 0%;}
+    to {width: ;}
 }
 .container1 > div:first-child{
     width: 60%;
@@ -89,24 +102,8 @@ section > div{
 .agftv{
     width: 100%;
 }
-@media (max-width: 768px) {
-    section{
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    section > div{
-        width: 90%;
-    }
-    .container1 > div{
-    width: 90%;
-    }
-    .container1 > div:first-child{
-        width: 90%;
-    }
-    .container2 > div:nth-child(2){
-        width: 90%;
-    }
+@media screen and (min-width: 910px){
+    /* HEADER: LOGO*/
     #logo {/* Logoet. Er i en div fordi det spiller bedre med flexbox. */
         width:200px;
         margin:30px;
@@ -137,8 +134,26 @@ section > div{
         font-weight:bold;
     }
 }
-@media screen and (min-width: 910px){
-    /* HEADER: LOGO*/
+
+@media (max-width: 910px) {
+    section{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    section > div{
+        width: 90%;
+
+    }
+    .container1 > div{
+    width: 90%;
+    }
+    .container1 > div:first-child{
+        width: 90%;
+    }
+    .container2 > div:nth-child(2){
+        width: 90%;
+    }
     #logo {/* Logoet. Er i en div fordi det spiller bedre med flexbox. */
         width:200px;
         margin:30px;
@@ -146,17 +161,15 @@ section > div{
         top:70px;
     }
 
+
     /* Skjul mobilmenuen.*/
     #navMobile{
-        display:none;
+        display:block;
     }
 
     /* Vis laptopmenuen og samtidig gør den til flex container. */
     #navLaptop {
-        display:flex; 
-        justify-content:space-around;
-        width:70%;
-        gap:10px;
+        display:none; 
     }
 
     /* Tekstlinks: */
